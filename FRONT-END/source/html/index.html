@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MUELMO CINES - INDEX</title>
+  <link rel="stylesheet" href="/FRONT-END/dist/index.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poller+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__logo">
+      <a href="/FRONT-END/source/html/index.html" class="header__logo-link">
+        <img src="/FRONT-END/source/images/logo.png" alt="Logo Muelmo Cines" class="header__logo-image">
+        <h1 class="header__title">MUELMO CINES</h1>
+      </a>
+    </div>
+    <div class="header__icons">
+      <!-- Menú hamburguesa (visible en móviles) -->
+      <button class="header__icon-button header__menu-toggle">
+        <img src="/FRONT-END/source/images/menu.svg" alt="Menú hamburguesa" class="header__icon">
+      </button>
+    </div>
+    <!-- Menú de navegación -->
+    <nav class="nav">
+      <button class="nav__close-button" aria-label="Cerrar menú">&times;</button>
+      <a class="nav__link" href='/FRONT-END/source/html/cartelera.html'>CARTELERA</a>
+      <a class="nav__link" href="/FRONT-END/source/html/destacadas.html">DESTACADAS</a>
+      <a class="nav__link" href="/FRONT-END/source/html/encuentranos.html">ENCUÉNTRANOS</a>
+    </nav>
+  </header>
+
+  <main class="main">
+    <!-- Contenido principal aquí -->
+
+
+
+
+
+
+
+
+    <!-- HTML para el carrusel de películas -->
+    <section class="carousel">
+      <button class="carousel__button carousel__button--prev" aria-label="Anterior">&#8249;</button>
+      <div class="carousel__track-container">
+        <ul class="carousel__track" id="carouselContent">
+          <!-- Las películas se cargarán dinámicamente aquí -->
+        </ul>
+      </div>
+      <button class="carousel__button carousel__button--next" aria-label="Siguiente">&#8250;</button>
+    </section>
+
+
+
+
+
+
+    <!-- HTML para la sección de Top Películas -->
+    <section class="featured">
+      <div class="featured__content">
+        <h2 class="featured__title">En busca de una estrella que ilumine el Coliseo</h2>
+        <p class="featured__description">
+          Lucius, hijo del emperador Lucilla y sobrino del emperador Cómodo, no olvida el pasado y va a luchar para
+          devolver la gloria a Roma. ¡Te contamos todo sobre la secuela de la mítica Gladiator (2000)!
+        </p>
+        <a href="#" class="featured__link">Leer el artículo completo</a>
+      </div>
+      <div class="featured__image-container">
+        <img src="/FRONT-END/source/images/gladiator-2-paul-mescal-6733609c958f2.avif" alt="Gladiator II"
+          class="featured__image" />
+      </div>
+    </section>
+
+
+    <!--SECCION CINES????-->
+    <section class="offers-section">
+      <h2 class="offers-section__title">NUESTRAS MEJORES SALAS</h2>
+      <div class="offers-section__container">
+        <div class="offer-card">
+          <img src="/FRONT-END/source/images/dolbysala.webp" alt="Sala DA" class="offer-card__image" />
+          <div class="offer-card__content">
+            <h3 class="offer-card__title">Sala Dolby Atmos 4K</h3>
+            <p class="offer-card__description">
+              La experiencia de siempre, pero mejorada al máximo nivel para no perderte ningún detalle.
+            </p>
+            <p class="offer-card__expiry">¡Sumérgete!</p>
+            <a href="/FRONT-END/source/html/nuestras-salas.html" class="offer-card__button">Descubrir</a>
+          </div>
+        </div>
+        <div class="offer-card">
+          <img src="/FRONT-END/source/images/vrsala.webp" alt="Sala VR" class="offer-card__image" />
+          <div class="offer-card__content">
+            <h3 class="offer-card__title">Sala de VR</h3>
+            <p class="offer-card__description">
+              ¿Preparado para tu proxima peli? Sé de los primeros en el mundo en disfrutar de la experiencia...
+            </p>
+            <p class="offer-card__expiry">¡Ven a descubrirla!</p>
+            <a href="/FRONT-END/source/html/nuestras-salas.html" class="offer-card__button">Descubrir</a>
+          </div>
+        </div>
+        <div class="offer-card">
+          <img src="/FRONT-END/source/images/4dsala.webp" alt="Sala 4D" class="offer-card__image" />
+          <div class="offer-card__content">
+            <h3 class="offer-card__title">Sala 4D</h3>
+            <p class="offer-card__description">
+              ¡Encárnate al máximo en la piel de tu personaje favorito con nuestra sala 4D! Una experiencia en toda
+              regla...
+            </p>
+            <p class="offer-card__expiry">¡Con olores, vibracion y efectos especiales!</p>
+            <a href="/FRONT-END/source/html/nuestras-salas.html" class="offer-card__button">Descubrir</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="footer__top">
+      <div class="footer__options">
+        <a href="/FRONT-END/source/html/cartelera.html" class="footer__option">
+          <p class="footer__option-text">PELÍCULAS</p>
+          <img class="footer__option-image1" src="/FRONT-END/source/images/peli-icono.png" alt="Películas">
+        </a>
+        <a href="/FRONT-END/source/html/nuestras-salas.html" class="footer__option">
+          <p class="footer__option-text">CINES</p>
+          <img class="footer__option-image2" src="/FRONT-END/source/images/cine.png" alt="Cines">
+        </a>
+        <a href="/FRONT-END/source/html/login.html" class="footer__option">
+          <p class="footer__option-text">CUENTA</p>
+          <img class="footer__option-image" src="/FRONT-END/source/images/user.png" alt="Cuenta">
+        </a>
+      </div>
+    </div>
+  </main>
+
+
+  <footer class="footer">
+
+    <div class="footer__bottom">
+      <nav class="footer__nav">
+        <a href="/FRONT-END/source/html/sobre-nosotros.html" class="footer__nav-link">Sobre nosotros</a>
+        <a href="/FRONT-END/source/html/privacidad.html" class="footer__nav-link">Política de privacidad</a>
+        <a href="/FRONT-END/source/html/cookies.html" class="footer__nav-link">Cookies</a>
+      </nav>
+    </div>
+    <a href="/FRONT-END/source/html/index.html" class="footer__logo-link">
+      <img src="/FRONT-END/source/images/logo.png" alt="Logo Muelmo Cines" class="footer__logo">
+    </a>
+
+  </footer>
+
+  <script src="/FRONT-END/source/js/index.js"></script>
+  <script src="/FRONT-END/source/js/fetch_peliculas_index.js"></script>
+</body>
+
+</html>
