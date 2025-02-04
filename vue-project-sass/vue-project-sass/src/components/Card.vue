@@ -1,24 +1,20 @@
+<script lang="ts">
+import { defineComponent } from 'vue';
+export default defineComponent({
+    name: 'Card',
+    props: {
+        title: { type: String, required: true, },
+        content: { type: String, required: true, },
+    },
+});
+</script>
+
 <template>
     <div class="card">
         <h2 class="card__title">{{ title }}</h2>
         <p class="card__content">{{ content }}</p>
     </div>
 </template>
-
-
-
-<script lang="ts">
-import { defineComponent } from 'vue';
-export default defineComponent({
-    name: 'Card',
-    props: {
-        title: {
-            type: String, required: true,
-        }, content: { type: String, required: true, },
-    },
-}); 
-</script>
-
 
 <style lang="scss" scoped>
 .card {
@@ -27,8 +23,7 @@ export default defineComponent({
     border-radius: 8px;
     padding: 1rem;
     margin: 1rem;
-    box-shadow: 0 2px 4px rgba(0, 0,
-            0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
     &__title {
         color: $primary-color;
@@ -42,5 +37,3 @@ export default defineComponent({
     }
 }
 </style>
-
-
