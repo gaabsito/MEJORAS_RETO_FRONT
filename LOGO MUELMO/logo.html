@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logo Cine - Canvas</title>
+    <style>
+        canvas {
+            transition: transform 0.3s ease-in-out;
+            display: block;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="logoCanvas" width="400" height="400"></canvas>
+    <script>
+        const canvas = document.getElementById("logoCanvas");
+        const ctx = canvas.getContext("2d");
+
+        function drawLogo(offsetX = 0, offsetY = 0, scale = 1) {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            
+            // Dibujar fondo blanco
+            ctx.fillStyle = "white";
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            
+            // Dibujar marco de película con bordes redondeados
+            ctx.fillStyle = "black";
+            ctx.beginPath();
+            ctx.roundRect(50 + offsetX, 80 + offsetY, 300 * scale, 160 * scale, 10);
+            ctx.fill();
+            
+            // Dibujar perforaciones de la película
+            ctx.fillStyle = "white";
+            for (let i = 0; i < 9; i++) {
+                ctx.fillRect(55 + i * 30 * scale + offsetX, 85 + offsetY, 15 * scale, 20 * scale);
+                ctx.fillRect(55 + i * 30 * scale + offsetX, 200 + offsetY, 15 * scale, 20 * scale);
+            }
+            
+            // Dibujar cámara de video estilizada
+            ctx.fillStyle = "white";
+            ctx.fillRect(180 + offsetX, 140 + offsetY, 50 * scale, 40 * scale); // Cuerpo
+            
+            ctx.fillStyle = "black";
+            ctx.beginPath();
+            ctx.arc(190 + offsetX, 160 + offsetY, 10 * scale, 0, Math.PI * 2); // Lente
+            ctx.fill();
+            
+            ctx.fillStyle = "white";
+            ctx.fillRect(230 + offsetX, 145 + offsetY, 15 * scale, 15 * scale); // Visor
+            
+            // Dibujar texto MUELMO CINES con animación suave
+            ctx.font = `${50 * scale}px Arial`;
+            ctx.textAlign = "center";
+            ctx.fillStyle = "black";
+            ctx.fillText("MUELMO", 200 + offsetX * 1.1, 300 + offsetY * 1.1);
+            ctx.font = `${25 * scale}px Arial`;
+            ctx.fillText("CINES", 200 + offsetX * 1.1, 340 + offsetY * 1.1);
+        }
+
+        drawLogo();
+
+        canvas.addEventListener("mouseenter", () => {
+            let frames = 20;
+            let frame = 0;
+            let interval = setInterval(() => {
+                drawLogo(10 * (frame / frames), -10 * (frame / frames), 1 + 0.15 * (frame / frames));
+                frame++;
+                if (frame >= frames) clearInterval(interval);
+            }, 15);
+        });
+
+        canvas.addEventListener("mouseleave", () => {
+            let frames = 20;
+            let frame = 0;
+            let interval = setInterval(() => {
+                drawLogo(10 * (1 - frame / frames), -10 * (1 - frame / frames), 1 + 0.15 * (1 - frame / frames));
+                frame++;
+                if (frame >= frames) clearInterval(interval);
+            }, 15);
+        });
+    </script>
+</body>
+</html>
